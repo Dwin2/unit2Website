@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Darwin's Website</title>
+        <link rel="stylesheet" type="text/css" href="subpage.css">
+    </head>
+    <body>
+        <div id="topSection"> 
+            <img src="NavBarSymbol.png" id="openNavBar" onclick="openNav()"></img>
+            <h1 id="title" style="margin-left: 300px;">UN SDG 4: Quality Education</h1> 
+            <img id="logo" src="theApple.jpg" style="margin-left: 1100px;"> </img>
+        </div>
+        <div id="navBar">
+            <h1 style="margin-left: 10px;">Navbar</h1>
+            <a href="website.html">Home</a>
+            <a href="hungerSubpage.html">Zero Hunger</a>
+            <a href="educationSubpage.html">Education</a>
+            <a href="https://www.sdgfund.org/">Donate Now!</a>
+        </div>
+        <div id="midSection">
+            <img id="midBackgroundImg" src="education2.jpg"> </img> 
+            <div id="slogan">Every child has the right to learn.</div>
+            <img id="unSdg2Logo-2" src="sdg4.png"></img>
+            <div id="blurb"> Secondary school completion rates is just around 53% in 2019 and Covid-19 isn't helping.<br>Donate to support education today!</div>
+        </div>
+        <div id="botSection">
+            <div id="subHeading1" style="left: 80px;"><u>Promoting Learning</u></div>
+            <img id="unStatImg" src="unsdg4Poster.png"></img>
+            <div id="unInfo">On any given school day, over 1 billion children around the world head to class. More children and adolescents today are enrolled in pre-primary, primary and secondary education than ever before. Yet, for many of them, schooling does not lead to learning – and this was before COVID-19 shuttered schools and disrupted learning across the globe, creating an urgent need to reimagine education. A lack of trained teachers, inadequate learning materials, makeshift classes and poor sanitation facilities make learning difficult for many children. Others come to school too hungry, sick or exhausted from work or household tasks to benefit from their lessons. The consequences are grave: An estimated 617 million children and adolescents around the world are unable to reach minimum proficiency levels in reading and mathematics, even though two thirds of them are in school. This learning crisis is the greatest global challenge to preparing children and adolescents for life, work and active citizenship. Schooling does not always lead to learning. Worldwide, there are more non-learners in school than out of school. What’s more, 11 per cent of primary-school-aged children and 20 per cent of lower-secondary-aged children are not in school at all. Children and adolescents are excluded from education for many reasons. Poverty remains one of the most obstinate barriers, with children from the poorest households almost five times more likely to be out of primary school than those from the richest. Children with disabilities and from ethnic minorities are also more likely to be left behind. For women in some parts of the world, education opportunities can be especially limited. Only 49 per cent of countries have achieved gender parity in primary education. Harmful gender norms can have severe effects for boys, too. Location also keeps children from school. Children from rural areas are more than twice as likely to be out of primary school than their urban peers. In conflict zones, 27 million children are out of school. Without skills for lifelong learning, children face greater barriers to earning potential and employment later in life. They are more likely to suffer adverse health outcomes and less likely to participate in the decisions that affect them – threatening their ability to build a better future for themselves and their communities.</div>
+            <div id="citation">UNICEF. 2020. ‘Education’, retrieved from <u>https://www.unicef.org/education</u></div>
+        </div>
+        <div id="footer">
+            <div id="copyright">© Copyright 2022. All rights reserved.</div>
+        </div>
+        <script type='text/javascript'>
+            function openNav() {
+                document.getElementById("navBar").style.width = "170px";
+                //document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("unSdg2Logo-2").style.left = "200px";
+                document.getElementById("openNavBar").setAttribute("onclick", "closeNav()");
+            }
+            function closeNav() {
+                document.getElementById("navBar").style.width = "0px";
+                //document.getElementById("main").style.marginLeft = "0px";
+                document.getElementById("unSdg2Logo-2").style.left = "20px";
+                document.getElementById("openNavBar").setAttribute("onclick", "openNav()");
+            }  
+        </script>
+    </body>
+</html>

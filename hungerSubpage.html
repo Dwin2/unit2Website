@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Darwin's Website</title>
+        <link rel="stylesheet" type="text/css" href="subpage.css">
+    </head>
+    <body>
+        <div id="topSection"> 
+            <img src="NavBarSymbol.png" id="openNavBar" onclick="openNav()"></img>
+            <h1 id="title" style="margin-left: 300px;">UN SDG 2: Zero Hunger</h1> 
+            <img id="logo" src="theApple.jpg" style="margin-left: 1100px;"> </img>
+        </div>
+        <div id="navBar">
+            <h1 style="margin-left: 10px;">Navbar</h1>
+            <a href="website.html">Home</a>
+            <a href="hungerSubpage.html">Zero Hunger</a>
+            <a href="educationSubpage.html">Education</a>
+            <a href="https://www.sdgfund.org/">Donate Now!</a>
+        </div>
+        <div id="midSection">
+            <img id="midBackgroundImg" src="zeroHunger3.jpg"> </img> 
+            <div id="slogan">You Can Help Beat Hunger!</div>
+            <img id="unSdg2Logo-2" src="unsdg2-2.webp"></img>
+            <div id="blurb"> 124 million people across 51 countries faced “crisis” levels of acute food insecurity or worse.<br>Donate to support hunger today!</div>
+        </div>
+        <div id="botSection">
+            <div id="subHeading1"><u>End Hunger Today.</u></div>
+            <img id="unStatImg" src="unsdgstat.jpg"></img>
+            <div id="unInfo">After decades of steady decline, the number of people who suffer from hunger – as measured by the prevalence of undernourishment – began to slowly increase again in 2015. Current estimates show that nearly 690 million people are hungry, or 8.9 percent of the world population – up by 10 million people in one year and by nearly 60 million in five years. The world is not on track to achieve Zero Hunger by 2030. If recent trends continue, the number of people affected by hunger would surpass 840 million by 2030. According to the World Food Programme, 135 million suffer from acute hunger largely due to man-made conflicts, climate change and economic downturns. The COVID-19 pandemic could now double that number, putting an additional 130 million people at risk of suffering acute hunger by the end of 2020. With more than a quarter of a billion people potentially at the brink of starvation, swift action needs to be taken to provide food and humanitarian relief to the most at-risk regions. At the same time, a profound change of the global food and agriculture system is needed if we are to nourish the more than 690 million people who are hungry today – and the additional 2 billion people the world will have by 2050. Increasing agricultural productivity and sustainable food production are crucial to help alleviate the perils of hunger.</div>
+            <div id="citation">The United Nations Department of Economic and Social Affairs. Unknown Date. ‘Goal 2: End hunger, achieve food security and improved nutrition and promote sustainable agriculture’, retrieved from <u>https://sdgs.un.org/goals/goal2</u></div>
+        </div>
+        <div id="footer">
+            <div id="copyright">© Copyright 2022. All rights reserved.</div>
+        </div>
+        <script type='text/javascript'>
+            function openNav() {
+                document.getElementById("navBar").style.width = "170px";
+                //document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("unSdg2Logo-2").style.left = "200px";
+                document.getElementById("openNavBar").setAttribute("onclick", "closeNav()");
+            }
+            function closeNav() {
+                document.getElementById("navBar").style.width = "0px";
+                //document.getElementById("main").style.marginLeft = "0px";
+                document.getElementById("unSdg2Logo-2").style.left = "20px";
+                document.getElementById("openNavBar").setAttribute("onclick", "openNav()");
+            }  
+        </script>
+    </body>
+</html>

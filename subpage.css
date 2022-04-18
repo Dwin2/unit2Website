@@ -1,0 +1,136 @@
+body {
+    background-color : lightblue;
+}
+h1 {
+    color : orange;
+}
+
+#navBar {
+    height: auto;
+    width: 0px; 
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    background-color: black;
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    color: white;
+}
+
+#navBar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+#navBar a:hover {
+    color: #f1f1f1;
+}
+
+#openNavBar {
+    width : 100px;
+    height : auto;
+}
+#openNavBar:hover {
+    background-color: lightcyan;
+}
+#openNavBar {
+    border-radius: 20%;
+}
+#topSection {
+    position: relative;
+}
+#title {
+    display : inline-block;
+    text-align: center;
+    margin-left: 130px;
+    position: absolute;
+    font-size: 50px;
+}
+#logo {
+    margin-top: 20px;
+    margin-left: 800px;
+    width : 100px;
+    height : auto;
+    display : inline-block;
+    position: absolute;
+}
+#logo:hover {
+    background-color: lightcyan;
+    border-radius: 20%;
+}
+#midBackgroundImg {
+    margin-top: 30px;
+    width : 100%;
+    height : auto;
+}
+#slogan {
+    color: white;
+    font-size: 80px;
+    top: 520px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    color: orange;
+} 
+#unSdg2Logo-2 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 20px;
+    top: 180px;
+    transition: 0.5s;
+}
+#blurb {
+    color: white;
+    position: absolute;
+    top: 760px;
+    left: 10%;
+    text-align: center;
+    font-size: 30px;
+}
+#botSection {
+    position: absolute;
+    margin-top: 0px;
+    background-color: lavenderblush;
+    height: 700px;
+    width: 100%;
+}
+#unStatImg {
+    margin-left: 100px;
+    height: 600px;
+    width: auto;
+    position: absolute;
+    top: 10px;
+    left: 660px;
+}
+#subHeading1 {
+    color: orange;
+    font-size: 60px;
+    position: absolute;
+    left: 100px;
+    top: 10px;
+}
+#unInfo {
+    width: 600px;
+    margin-left: 30px;
+    margin-top: 100px;
+}
+#citation {
+    font-size: 10px;
+    width: 600px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#footer {
+    height : 30px;
+    width: auto;
+    background-color: lightyellow;
+    margin-top: 700px;
+}
+#copyright {
+    text-align: center;
+}
