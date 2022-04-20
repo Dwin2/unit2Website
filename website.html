@@ -18,26 +18,28 @@
         </div>
         <div id="navBar">
             <h1 style="margin-left: 10px;">Navbar</h1>
-            <a href="website.html">Home</a>
+            <! each of the following are links in the nav bar
+            <a href="website.html">Home</a> 
             <a href="hungerSubpage.html">Zero Hunger</a>
             <a href="educationSubpage.html">Education</a>
             <a href="https://www.sdgfund.org/">Donate Now!</a>
         </div>
 
-        <div id="slideshow">
+        <div id="slideshow"> <! This div contains the entire Image Carousel section and will be used in CSS
             <div id="slogan">Fight For What Matters Most.</div> <! This is the website's slogan displayed overtop of the background Image Carousel
             <div id ="slide1">
-                <img id="slideshowImg" src="education1.jpg">
+                <img id="slideshowImg" src="education1.jpg"> <! This is to display the first image of the Image Carousel. It has an id of slideshowImg, used for CSS and Javascript
             </div>
  
             <div id ="slide2">
-                <img id="slideshowImg" src="zeroHunger1.jpg">
+                <img id="slideshowImg" src="zeroHunger1.jpg"> <! This is to display the second image of the Image Carousel. It has an id of slideshowImg, used for CSS and Javascript
             </div>
  
             <div id ="slide3">
-                <img id="slideshowImg" src="zeroHunger2.jpg">
+                <img id="slideshowImg" src="zeroHunger2.jpg"> <! This is to display the third image of the Image Carousel. It has an id of slideshowImg, used for CSS and Javascript
             </div>
             <div id="carouselDots">
+                <! These are the three dot of the three, which indicate the image index of the currently displayed image
                 <span id="dot1"></span> 
                 <span id="dot2"></span> 
                 <span id="dot3"></span> 
@@ -62,50 +64,53 @@
         
         <script type='text/javascript'>
             xValues = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
+            // above is the values for the x axis of the graph
             new Chart("myChart", {
                 type: "line",
                 data: {
                     labels: xValues,
+                    // each of the following take from their respective file //
                     datasets: [{ 
                         data: WorldValue,
                         borderColor: "red",
                         fill: false,
                         label: "World"
-                        // World
+                        // World data 
                     }, 
                     { 
                         data: AfricaValues,
                         borderColor: "green",
                         fill: false,
                         label: "Sub-Saharan Africa"
-                        // Sub-Saharan Africa
+                        // Sub-Saharan Africa data
                     }, 
                     { 
                         data: SouthAmValues,
                         borderColor: "blue",
                         fill: false,
                         label: "South America"
-                        //SouthAm
+                        //SouthAm data
                     },
                     { 
                         data: oceaniaValues,
                         borderColor: "orange",
                         fill: false,
                         label: "Oceania"
-                        //oceania
+                        //oceania data
                     },
                     { 
                         data: sAsiaValues,
                         borderColor: "purple",
                         fill: false,
                         label: "Southern Asia"
-                        //south Asia
+                        //South Asia data
                     },
                     {
                         data: latinAmValues,
                         borderColor: "lightgreen",
                         fill: false,
                         label: "Latin America"
+                        //Latin America data
                     }
                     ]
                 },
@@ -115,24 +120,24 @@
             });
 
 
-            slideIndex = 3;
-            dotIndex = 3;
+            slideIndex = 3; // the starting slide index, this will be changed throughout the code to represent which image is being currently displayed
+            dotIndex = 3; // the starting dot index , this will be changed throughout the code to represent which dot is being currently displayed
             showSlides();
             function showSlides() {
-                slide1 = document.getElementById("slide1");
+                slide1 = document.getElementById("slide1"); // get each of the three images
                 slide2 = document.getElementById("slide2");
                 slide3 = document.getElementById("slide3");
 
-                slogan = document.getElementById("slogan");
+                slogan = document.getElementById("slogan"); 
                 
-                slide1.style.display = "none";
+                slide1.style.display = "none";  // first make all three images not visible
                 slide2.style.display = "none";
                 slide3.style.display = "none";
  
                 slideIndex ++;
-                if (slideIndex > 3) slideIndex = 1; 
+                if (slideIndex > 3) slideIndex = 1;  // if slideindex becomes greater than 3, then make image carousel loop back to 1 because there isn't a fourth image
  
-                if (slideIndex == 1) slide1.style.display = "block"; 
+                if (slideIndex == 1) slide1.style.display = "block";  // whichever slide it is, display that respective slide
                 else if (slideIndex == 2) slide2.style.display = "block";
                 else if (slideIndex == 3) slide3.style.display = "block";
  
@@ -140,7 +145,7 @@
                 dot2 = document.getElementById("dot2");
                 dot3 = document.getElementById("dot3");
  
-                dot1.style.backgroundColor = "aqua"; 
+                dot1.style.backgroundColor = "aqua";  // set each background color to aqua
                 dot2.style.backgroundColor = "aqua"; 
                 dot3.style.backgroundColor = "aqua"; 
 
@@ -148,24 +153,24 @@
                 dotIndex ++;
                 if (dotIndex > 3) dotIndex = 1; 
  
-                if (dotIndex == 1) dot1.style.backgroundColor = "blue";
+                if (dotIndex == 1) dot1.style.backgroundColor = "blue"; // change whichever dot should be displayed to blue
                 else if (dotIndex == 2) dot2.style.backgroundColor = "blue";
                 else if (dotIndex == 3) dot3.style.backgroundColor = "blue";
 
-                slogan.style.color = "orange";
+                slogan.style.color = "orange"; 
 
                 if (slideIndex == 1) slogan.style.color = "red";
                 if (slideIndex == 3) slogan.style.color = "lightblue"
                  
-                setTimeout(showSlides, 5000);
+                setTimeout(showSlides, 5000); // this makes it so that every 5 seconds the images alternate
             }
             function openNav() {
-                document.getElementById("navBar").style.width = "170px";
+                document.getElementById("navBar").style.width = "170px"; // open nav bar
                 document.getElementById("openNavBar").setAttribute("onclick", "closeNav()");
             }
             function closeNav() {
-                document.getElementById("navBar").style.width = "0px";
-                document.getElementById("openNavBar").setAttribute("onclick", "openNav()");
+                document.getElementById("navBar").style.width = "0px"; // close nav bar 
+                document.getElementById("openNavBar").setAttribute("onclick", "openNav()"); 
             }        
             function changeToHunger() {
                 document.getElementById("issueTitle").innerHTML = "<u>Zero<br>Hunger</u>";
